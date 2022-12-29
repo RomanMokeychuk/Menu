@@ -1,0 +1,124 @@
+.menu {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    background: #333;
+    border-bottom: 5px solid #1b9bff;
+}
+
+.menu ul li {
+    float: left;
+}
+
+.menu ul li,
+.menu ul li:hover {
+    position: relative;
+    cursor: default;
+}
+
+.menu ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+    border-top: 4px solid #1b9bff;
+    text-transform: none;
+    min-width: 240px;
+}
+
+.menu ul ul li {
+    float: none;
+    font-weight: normal;
+    position: relative;
+}
+
+.menu ul ul ul {
+    top: 0;
+    left: auto;
+    right: -240px;
+    border-top: 0 none;
+}
+
+.menu ul li:hover > ul {
+    visibility: visible;
+}
+
+.menu a {
+    display: block;
+    line-height: 20px;
+    text-decoration: none;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.menu:after,
+.menu ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.menu ul {
+    text-transform: uppercase;
+}
+
+.menu ul ul a {
+    background: #1b9bff;
+    color: #fff;
+    border: 1px solid #0082e7;
+    border-top: 0 none;
+    line-height: 25px;
+    padding: 20px 25px;
+}
+
+.menu > ul > li > a {
+    line-height: 60px;
+}
+
+.menu ul ul li:first-child > a {
+    border-top: 1px solid #0082e7;
+}
+
+.menu ul ul li:hover > a {
+    background: #35a6ff;
+}
+
+.menu ul ul li:last-child > a {
+    border-radius: 0 0 3px 3px;
+}
+
+.menu ul ul li:last-child:hover > a {
+    border-radius: 0 0 0 3px;
+}
+
+.menu ul ul li.fall_out > a:after {
+    content: "+";
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    margin-top: -10px;
+}
+
+.menu ul li:hover > a,
+.menu ul li.active > a {
+    background: #1b9bff;
+    color: #fff;
+}
+
+.menu ul li.fall_out > a:after {
+    content: "+";
+    margin-left: 10px;
+}
+
+.menu ul li.last ul {
+    left: auto;
+    right: 0;
+}
+
+.menu ul li.last ul ul {
+    left: auto;
+    right: 100%;
+}
